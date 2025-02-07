@@ -4,8 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tempat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(238, 181, 233);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+          background-color: #34495e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: honeydew;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color:rgb(240, 22, 156);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color:rgb(241, 121, 195);
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        .actions a {
+            text-decoration: none;
+            color: #2980b9;
+            margin: 0 10px;
+        }
+
+        .actions a:hover {
+            color: #e74c3c;
+        }
+
+        .add-btn {
+            background-color:rgb(241, 121, 195);
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .add-btn:hover {
+            background-color:rgb(241, 121, 195);
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
     <h1>Data tempat parkir</h1>
     <a href ="tambah.php">tambah tempat baru</a>
     <table border="1">
@@ -41,5 +120,7 @@
         }
         ?>
     </table>
+    </div>
+   
 </body>
 </html>
