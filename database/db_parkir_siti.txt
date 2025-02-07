@@ -1,0 +1,33 @@
+CREATE DATABASE db_parkir_siti
+
+CREATE TABLE kendaraan
+(plat_no varchar(50) primary key,
+ id_tempat int,
+ waktu_masuk varchar(50),
+ tipe_kendaraan varchar(50),
+ waktu_keluar varchar(50));
+
+CREATE TABLE tempat_parkir
+(id_tempat int primary key,
+ nama_tempat varchar (50),
+ harga varchar (50),
+ lokasi varchar (50));
+
+INSERT INTO kendaraan VALUES
+("D 2212 ZY","1","senin,07.00","motor","senin,10.00"),
+("D 1104 FT","2","sabtu,17.00","motor","sabtu,20.00"),
+("D 2404 MH","3","rabu,10.00","mobil","rabu,14.00"),
+("D 1306 AQ","4","kamis,07.00","motor","kamis,10.00"),
+("D 1222 ZH","5","selasa,08.10","mobil","selasa,10.30");
+
+INSERT INTO tempat_parkir VALUES 
+("1","Pujasera depan","2000","lanud"),
+("2","Pujasera belakang","2000","lanud"),
+("3","Pujasera depan","5000","lanud"),
+("4","Pujasera depan","2000","lanud"),
+("5","Pujasera belakang","5000","lanud");
+
+ALTER TABLE kendaraan ADD
+FOREIGN KEY (id_tempat) REFERENCES tempat_parkir (id_tempat)
+ON DELETE CASCADE
+ON UPDATE CASCADE
